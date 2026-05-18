@@ -41,6 +41,5 @@ get_header();
             </div>
         </div>
     </section>
-</div>
 
-<?php get_footer('sobre'); ?>
+<?php get_template_part('parts/footer', 'sobre'); ?>

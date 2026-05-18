@@ -1,35 +1,6 @@
 <?php get_header();?>
 
-<section class="container-fluid jl-hero">
-    <div class=container>
-        <div class="row align-items-center jl-hero-inner jl-text-light">
-            <div class="col-sm-12 p-0 pl-sm-3 pr-sm-3">
-                <div class=jl-hero-inner-content>
-                    <div class=row>
-                        <div class=col-sm-12>
-                            <h1 class="jl-title jl-title-medium">Manage It! Aplicativo Mobile</h1>
-                        </div>
-                        <div class="col-lg-3 col-sm-12">
-                            <div class=jl-project-stats>
-                                <p><span class=jl-text-green>Projeto: </span>Aplicativo Mobile
-                                    <p><span class=jl-text-green>Cliente: </span>Manage It
-                                        <p><span class=jl-text-green>Serviços: </span>UX, UI e Prototipagem</p><a href=# class="jl-mar-top-15 jl-btn jl-btn-green jl-btn-medium">visitar site<ion-icon name=share-alt>
-                    </ion-icon></a>
-                            </div>
-                        </div>
-                        <div class="col-sm-12 col-lg-9">
-                            <div class=jl-project-description>
-                                <p>O aplicativo <span class=jl-text-green>Manage It</span> tem como objetivo organizar as tarefas do dia a dia com uso de inteligência artificial. Nulla vulputate, ex in tincidunt consequat, dui metus luctus purus, ut
-                                    dapibus quam augue sit amet leo. Phasellus sit amet purus in elit efficitur viverra.
-                                    <p>Nulla vulputate, ex in tincidunt consequat, dui metus luctus purus, ut dapibus quam augue sit amet leo. Phasellus sit amet purus in elit efficitur viverra.
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
+<?php get_template_part('parts/section', 'portfolio-hero'); ?>
 <main class=jl-post>
     <div class=container>
         <div class=row>
