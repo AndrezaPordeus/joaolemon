@@ -5,13 +5,16 @@
     <meta charset=UTF-8>
     <meta content="width=device-width,initial-scale=1" name=viewport>
     <meta content="ie=edge" http-equiv=X-UA-Compatible>
+    <?php wp_head();?>
     <link href="https://fonts.googleapis.com/css?family=Abril+Fatface|Open+Sans:400,400i,700,700i,800,800i&display=swap" rel=stylesheet>
     <link href="<?php bloginfo('template_url');?>/css/bootstrap-grid.min.css" rel=stylesheet>
-    <link href="<?php bloginfo('template_url');?>/css/main.min.css" rel=stylesheet>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="<?php bloginfo('template_url');?>/css/main.min.css" rel=stylesheet>
+    <link href="<?php bloginfo('template_url');?>/css/gutenberg-blocks.css" rel=stylesheet>    
     <script src=https://unpkg.com/ionicons@4.5.10-0/dist/ionicons/ionicons.esm.js type=module></script>
     <script src=https://unpkg.com/ionicons@4.5.10-0/dist/ionicons/ionicons.js nomodule=""></script>
     <title>João Lemon - UX/UI Designer</title>
+    
 </head>
 
 <body>
