@@ -56,6 +56,11 @@
             </div>
         </div>
     </div>
+
+    <?php 
+        if(is_singular( 'project' ) );
+            get_template_part('parts/gallery', 'modal');
+    ?>
     <header class=jl-topbar>
         <div class="jl-logo jl-logo-big"><img src="<?php bloginfo('template_url');?>/images/logo.svg" alt="Logo João Lemon UX/UI Designer"></div>
         <nav class=jl-menu><a href=<?php echo home_url();?>>Home</a> <a href=<?php echo home_url();?>/portfolio>Portfolio</a> <a href=<?php echo home_url();?>/sobre>Sobre</a></nav>
@@ -64,10 +69,18 @@
     <div class="jl-text-light jl-bg-black jl-contact-info">
         <div class=jl-contact-info-inner>
             <h2 class="jl-title jl-text-green">Contato</h2>
-            <p>hello@joaolemon.com
-            <p>+55 (00) 9 9999 8888
-            <div class=jl-social-links><a href=# class=jl-social><img src="<?php bloginfo('template_url');?>/images/icon-instagram.svg" alt=Instagram> </a><a href=# class=jl-social><img src="<?php bloginfo('template_url');?>/images/icon-twitter.svg" alt=Twitter> </a><a href=# class=jl-social><img src="<?php bloginfo('template_url');?>/images/icon-dribbble.svg" alt=Dribbble></a></div>
+            <p><?php the_field('email', 'option');?></p>
+            <p><?php the_field('telefone', 'option');?></p>
+            <div class=jl-social-links>
+                <a href="<?php the_field('instagram', 'option');?>" class=jl-social>
+                    <img src="<?php bloginfo('template_url');?>/images/icon-instagram.svg" alt=Instagram> </a>
+                <a href="<?php the_field('twitter', 'option');?>" class=jl-social>
+                    <img src="<?php bloginfo('template_url');?>/images/icon-twitter.svg" alt=Twitter> </a>
+                <a href="<?php the_field('dribbble', 'option');?>" class=jl-social>
+                    <img src="<?php bloginfo('template_url');?>/images/icon-dribbble.svg" alt=Dribbble></a>
+            </div>
         </div>
         <div class=jl-corner></div>
-    </div><button class=jl-btn-contact></button>
+    </div>
+    <button class=jl-btn-contact></button>
     <div class=jl-page-wrapper>

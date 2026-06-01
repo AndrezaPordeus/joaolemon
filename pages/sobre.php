@@ -17,18 +17,19 @@ get_header();
                             <<?php the_field('texto_1');?>
                             <div class="jl-contact-info-inner jl-mar-top-30">
                                 <div class="jl-mar-bottom-30 jl-social-links-circle">
-                                    <a href=# class="jl-social jl-bg-green jl-mar-right-30 jl-text-black">
+                                    <a href="<?php the_field('instagram', 'option');?>" class="jl-social jl-bg-green jl-mar-right-30 jl-text-black">
                                         <ion-icon name=logo-instagram></ion-icon>
                                     </a>
-                                    <a href=# class="jl-social jl-bg-green jl-mar-right-30 jl-text-black">
+                                    <a href="<?php the_field('twitter', 'option');?>" class="jl-social jl-bg-green jl-mar-right-30 jl-text-black">
                                         <ion-icon name=logo-twitter></ion-icon>
                                     </a>
-                                    <a href=# class="jl-social jl-bg-green jl-mar-right-30 jl-text-black">
+                                    <a href="<?php the_field('dribbble', 'option');?>" class="jl-social jl-bg-green jl-mar-right-30 jl-text-black">
                                         <ion-icon name=logo-dribbble></ion-icon>
                                     </a>
                                 </div>
-                                <p>hello@<span class=jl-text-green>joaolemon</span>.com</p><br>
-                                <p>+55 (00) 9 9999 8888</div>
+                                <p><?php the_field('email', 'option');?></p><br>
+                                <p><?php the_field('email', 'option');?></p>
+                            </div>
                     </div>
                     <div class=jl-premios-sobre>
                         <h4 class="jl-text-green jl-mar-bottom-15 jl-subtitle">Prêmios e Reconhecimentos</h4>

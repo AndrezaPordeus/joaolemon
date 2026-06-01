@@ -7,5 +7,5 @@
         get_template_part('parts/section', 'pre-gallery');
     endif;
     get_template_part('parts/section', 'gallery'); 
-    get_footer('single');   
+    get_template_part('parts/footer', 'single');  
 ?>
