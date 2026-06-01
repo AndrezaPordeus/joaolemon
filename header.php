@@ -1,18 +1,18 @@
 <!doctype html>
-<html lang=pt-br>
+<html lang="pt-br">
 
 <head>
-    <meta charset=UTF-8>
-    <meta content="width=device-width,initial-scale=1" name=viewport>
-    <meta content="ie=edge" http-equiv=X-UA-Compatible>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <?php wp_head();?>
-    <link href="https://fonts.googleapis.com/css?family=Abril+Fatface|Open+Sans:400,400i,700,700i,800,800i&display=swap" rel=stylesheet>
-    <link href="<?php bloginfo('template_url');?>/css/bootstrap-grid.min.css" rel=stylesheet>
+    <link href="https://fonts.googleapis.com/css?family=Abril+Fatface|Open+Sans:400,400i,700,700i,800,800i&display=swap" rel="stylesheet">
+    <link href="<?php bloginfo('template_url');?>/css/bootstrap-grid.min.css" rel="stylesheet">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <link href="<?php bloginfo('template_url');?>/css/main.min.css" rel=stylesheet>
-    <link href="<?php bloginfo('template_url');?>/css/gutenberg-blocks.css" rel=stylesheet>    
-    <script src=https://unpkg.com/ionicons@4.5.10-0/dist/ionicons/ionicons.esm.js type=module></script>
-    <script src=https://unpkg.com/ionicons@4.5.10-0/dist/ionicons/ionicons.js nomodule=""></script>
+    <link href="<?php bloginfo('template_url');?>/css/main.min.css" rel="stylesheet">
+    <link href="<?php bloginfo('template_url');?>/css/gutenberg-blocks.css" rel="stylesheet">    
+    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons/ionicons.esm.js" type="module"></script>
+    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons/ionicons.js" nomodule></script>
     <title>João Lemon - UX/UI Designer</title>
     
 </head>
@@ -61,11 +61,36 @@
         if(is_singular( 'project' ) );
             get_template_part('parts/gallery', 'modal');
     ?>
+
     <header class=jl-topbar>
-        <div class="jl-logo jl-logo-big"><img src="<?php bloginfo('template_url');?>/images/logo.svg" alt="Logo João Lemon UX/UI Designer"></div>
-        <nav class=jl-menu><a href=<?php echo home_url();?>>Home</a> <a href=<?php echo home_url();?>/portfolio>Portfolio</a> <a href=<?php echo home_url();?>/sobre>Sobre</a></nav>
-    </header><button class="jl-toggle-menu jl-btn-menu-mob"><ion-icon name=menu></ion-icon></button>
-    <nav class="jl-menu-is-closed jl-menu-mob"><a href=<?php echo home_url();?>>Home</a> <a href=<?php echo home_url();?>/portfolio>Portfolio</a> <a href=<?php echo home_url();?>/sobre>Sobre</a></nav>
+        <div class="jl-logo jl-logo-big">
+            <img src="<?php bloginfo('template_url');?>/images/logo.svg" alt="Logo João Lemon UX/UI Designer">
+        </div>
+
+        <?php 
+            wp_nav_menu( 
+                array( 
+                'theme_location' => 'desktop-menu', 
+                'menu_class' => 'jl-menu' 
+                ) 
+            );
+        ?>
+
+    </header>
+
+    <button class="jl-toggle-menu jl-btn-menu-mob">
+        <ion-icon name=menu></ion-icon>
+    </button>
+
+        <?php 
+            wp_nav_menu( 
+                array( 
+                'theme_location' => 'mobile-menu', 
+                'menu_class' => 'jl-menu-is-closed jl-menu-mob' 
+                ) 
+            );
+        ?>
+    
     <div class="jl-text-light jl-bg-black jl-contact-info">
         <div class=jl-contact-info-inner>
             <h2 class="jl-title jl-text-green">Contato</h2>
